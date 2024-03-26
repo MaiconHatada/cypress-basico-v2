@@ -14,7 +14,7 @@ it('deve fazer o checked e o unchecked nos campos', () => {
           .uncheck()
           .should('not.be.checked')
           //.should('not.be.visible')
-        cy.get('input[type="checkbox"][value="phone"]').check()
+        cy('input[type="checkbox"][value="phone"]').check()
           .should('be.visible')
 })
 })
