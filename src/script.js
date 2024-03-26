@@ -9,7 +9,7 @@ document.querySelector('#phone-checkbox')
       phoneLabelSpan.style.display = 'inline'
       phoneField.required = !isPhoneRequired
       isPhoneRequired = !isPhoneRequired
-    } else {
+    } //else {
       phoneLabelSpan.style.display = 'none'
       phoneField.required = !isPhoneRequired
       isPhoneRequired = !isPhoneRequired
@@ -30,10 +30,10 @@ document.querySelector('button[type="submit"]')
     const fileField = document.querySelector('input[type="file"]')
     const successMessage = document.querySelector('.success')
     if (!firstNameField.value || !lastNameField.value || !emailField.value || !textareaField.value) {
-      return showAndHideErrorMessage()
+     // return showAndHideErrorMessage()
     }
     if (isPhoneRequired && !phoneField.value) {
-      return showAndHideErrorMessage()
+      //return showAndHideErrorMessage()
     }
     if (!emailField.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
       //return showAndHideErrorMessage()
