@@ -5,7 +5,7 @@ describe('Acessando o site do curso', () => {
 
     beforeEach('Acessando o menu', () => {
         cy.visit('https://cac-tat.s3.eu-central-1.amazonaws.com/index.html')
-        cy.title().should('be.equal' ,'Central de Atendimento ao Cliente')
+        cy.title().should('be.equal' ,'Central de Atendimento ao Cliente TAT')
     
 })  
 it.only('devo acessar o menu do curso e verificar titulo pagina' , () => {
