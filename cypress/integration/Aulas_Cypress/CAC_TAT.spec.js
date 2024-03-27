@@ -8,11 +8,20 @@ describe('Acessando o site do curso', () => {
         cy.title().should('be.equal' ,'Central de Atendimento ao Cliente TAT')
     
 })  
-it.only('devo acessar o menu do curso e verificar titulo pagina' , () => {
-       cy.preencherFormulario()
+it('devo acessar o menu do curso e verificar titulo pagina' , () => {
+    // comando para rodar o teste varias vez Cypress._.times (10, () => () {aqui vai o teste})
+    Cypress._.times(4 , () => {
+
+    cy.clock()   
+    
+    cy.preencherFormulario()
             cy.contains('Mensagem enviada com sucesso.')
                 .should('be.visible') 
 
+    cy.tick(3000)
+
+    cy.get('.success').should('not.be.visible')
+})
                     
     })
 
@@ -49,6 +58,14 @@ it('deve seleciona Blog pelo seu indice', () => {
      cy.get('#product')
         .select(1)
         .should('have.value', 'blog')
+})
+
+it.only('preenche area de texto usando o comando invoke', () => {
+    const longText = Cypress._.repeat('0123456789', 20)
+
+    cy.get('#open-text-area')
+      .invoke('val', longText)
+      .should( 'have.value', longText)
 })
 
 })
