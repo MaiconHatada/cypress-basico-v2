@@ -60,7 +60,7 @@ it('deve seleciona Blog pelo seu indice', () => {
         .should('have.value', 'blog')
 })
 
-it.only('preenche area de texto usando o comando invoke', () => {
+it('preenche area de texto usando o comando invoke', () => {
     const longText = Cypress._.repeat('0123456789', 20)
 
     cy.get('#open-text-area')

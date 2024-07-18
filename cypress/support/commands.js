@@ -1,3 +1,7 @@
+
+
+
+
 Cypress.Commands.add('preencherFormulario', () => {
     cy.get('#firstName').type('Maicon Luiz').should('be.visible')
     .get('#lastName').type('Hatada').should('be.visible')
